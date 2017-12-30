@@ -13,7 +13,7 @@ An instance of WZQInstantSearch would build an improved **Trie** behind the scen
 	
 For now, you can use wzq for any further search requirement.
 
-- use exposed `Search` function to search related texts with your typed keywords
+- Use exposed `Search` function to search related texts with your typed keywords
 
 Suppose You just want to search 
 		let found = wzq.search("An App")
@@ -23,7 +23,9 @@ Suppose You just want to search
 
 In a nutshell, we use a combination of **Trie** and **Index Array** to develop this algorithm.
 
-
+- Preprocess both search keywords and local texts
+- Split long sentences into single words
+- 
 
 Suppose you have different texts in your local data storage system and you want to show related matches with keywords. 
 
