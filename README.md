@@ -11,21 +11,30 @@ An instance of WZQInstantSearch would build an improved **Trie** behind the scen
 	let texts = ["An apple a day keeps the doctor away", "whose your daday", "I feel on top of world"]
 	let wzq = WZQInstantSearch(texts)
 	
-For now, you can use wzq for any further search requirement.
+For now, you can use `wzq` for any further search requirement.
 
 - Use exposed `Search` function to search related texts with your typed keywords
 
-Suppose You just want to search 
-		let found = wzq.search("An App")
+Suppose You just want to search something related with **Apple**, you just start typing `An App`, etc. You can use `wzq` instance to search as follows:
+
+	let found = wzq.search("An App")
+	
+If as expected, the `found` will be an array with **An apple a day keeps the doctor away** in it.
 	
 
 ### How does it work
 
 In a nutshell, we use a combination of **Trie** and **Index Array** to develop this algorithm.
 
+**First Part: Build Trie with given texts**
+
 - Preprocess both search keywords and local texts
-- Split long sentences into single words
-- 
+- Split long sentences into separate single words
+- Calculate the significance of each word.
+
+**Second Part: Search by both whole text search and prefix search**
+
+- To be clarified, we regarded your last sequences of characters as prefix rather than a complete word.
 
 Suppose you have different texts in your local data storage system and you want to show related matches with keywords. 
 
