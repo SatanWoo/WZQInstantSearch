@@ -35,7 +35,3 @@ In a nutshell, we use a combination of **Trie** and **Index Array** to develop t
 **Second Part: Search by both whole text search and prefix search**
 
 - To be clarified, we regarded your last sequences of characters as prefix rather than a complete word.
-
-Suppose you have different texts in your local data storage system and you want to show related matches with keywords. 
-
-
